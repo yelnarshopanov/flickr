@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Flickr</string>
+    <string name="action_settings">Settings</string>
+    <string name="search_photos">Search photos</string>
+</resources>
