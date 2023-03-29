@@ -63,12 +63,8 @@ ext {
             materialDesign               : "com.google.android.material:material:1.3.0",
             coreKtx                      : 'androidx.core:core-ktx:1.5.0',
             constraintLayout             : "androidx.constraintlayout:constraintlayout:2.0.2",
-            appcompatLegacy              : 'androidx.legacy:legacy-support-v4:1.0.0',
             fragmentKtx                  : 'androidx.fragment:fragment-ktx:1.3.4',
             annotations                  : 'androidx.annotation:annotation:1.2.0',
-            auth                         : "com.google.android.gms:play-services-auth:19.0.0",
-            viewpager2                   : 'androidx.viewpager2:viewpager2:1.0.0',
-            location                     : "com.google.android.gms:play-services-location:17.1.0",
             // Architecture Components
             lifecycleRuntime             : "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycleVersion",
             lifecycle                    : "androidx.lifecycle:lifecycle-extensions:$lifecycleExVersion",
@@ -83,31 +79,10 @@ ext {
             androidxNavigationUiKtx      : "androidx.navigation:navigation-ui-ktx:$navigation"
     ]
 
-    supportv7Version = '28.0.0'
-    androidSupportv7 = [
-            cardView  : "com.android.support:cardview-v7:$supportv7Version",
-            gridLayout: "com.android.support:gridlayout-v7:$supportv7Version"
-    ]
-
     coroutinesVersion = '1.6.4'
     coroutinesDependencies = [
             coroutines       : "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion",
             coroutinesAndroid: "org.jetbrains.kotlinx:kotlinx-coroutines-android:$coroutinesVersion"
-    ]
-
-    koinVersion = '2.0.1'
-    koinDependencies = [
-            // https://github.com/InsertKoinIO/koin
-            core     : "io.insert-koin:koin-android:$koinVersion",
-            scope    : "io.insert-koin:koin-androidx-scope:$koinVersion",
-            viewModel: "io.insert-koin:koin-androidx-viewmodel:$koinVersion"
-    ]
-
-    firebaseDependencies = [
-            analytics   : 'com.google.firebase:firebase-analytics:19.0.1',
-            crashlytics : "com.google.firebase:firebase-crashlytics:18.2.1",
-            remoteConfig: 'com.google.firebase:firebase-config-ktx:21.0.0',
-            storage     : 'com.google.firebase:firebase-storage:20.0.0'
     ]
 
     otherDependencies = [
@@ -125,48 +100,15 @@ ext {
             usbSerial                        : 'com.github.felHR85:UsbSerial:6.1.0'
     ]
 
-    ktorVersion = "2.1.3"
-    ktorDependencies = [
-            core       : "io.ktor:ktor:$ktorVersion",
-            serverNetty: "io.ktor:ktor-server-netty:$ktorVersion",
-            negotiation: "io.ktor:ktor-server-content-negotiation:$ktorVersion",
-            gson       : "io.ktor:ktor-serialization-gson:$ktorVersion",
-            statusPages: "io.ktor:ktor-server-status-pages:$ktorVersion"
-    ]
-
-    itextVersion = '5.5.13'
-    itext = [
-            pdf      : "com.itextpdf:itextpdf:$itextVersion",
-            pdfa     : "com.itextpdf:itext-pdfa:$itextVersion",
-            xtra     : "com.itextpdf:itext-xtra:$itextVersion",
-            xmlworker: "com.itextpdf.tool:xmlworker:$itextVersion",
-            imaging  : "org.apache.commons:commons-imaging:1.0-alpha1"
-    ]
-
-    grpcVersion = '1.37.1'
-    grpcDependencies = [
-            // https://github.com/grpc/grpc/releases
-            okhttp    : "io.grpc:grpc-okhttp:$grpcVersion",
-            protobuf  : "io.grpc:grpc-protobuf:$grpcVersion",
-            stub      : "io.grpc:grpc-stub:$grpcVersion",
-            android   : "io.grpc:grpc-android:$grpcVersion",
-            kotlinStub: 'io.grpc:grpc-kotlin-stub:1.1.0'
-    ]
-
     daggerVersion = '2.43.2'
     daggerDependencies = [
             dagger        : "com.google.dagger:dagger:$daggerVersion",
             daggerCompiler: "com.google.dagger:dagger-compiler:$daggerVersion"
     ]
 
-    composeVersion = "1.3.1"
-    composeDependencies = [
-            ui        : "androidx.compose.ui:ui:$composeVersion",
-            foundation: "androidx.compose.foundation:foundation:$composeVersion",
-            material  : "androidx.compose.material:material:$composeVersion",
-            runtime   : "androidx.compose.runtime:runtime:$composeVersion",
-            activity  : "androidx.activity:activity-compose:1.6.1",
-            preview   : "androidx.compose.ui:ui-tooling-preview:$composeVersion",
-            uiTooling : "androidx.compose.ui:ui-tooling:$composeVersion"
+    glideVersion = '4.14.2'
+    glideDependencies = [
+            glide        : "com.github.bumptech.glide:glide:$glideVersion",
+            glideCompiler: "com.github.bumptech.glide:compiler:$glideVersion"
     ]
 }
