@@ -13,7 +13,7 @@ import kotlinx.coroutines.flow.receiveAsFlow
 import kotlinx.coroutines.flow.stateIn
 import kz.shopanov.yelnar.flickr.R
 import kz.shopanov.yelnar.flickr.common.base.BaseViewModel
-import kz.shopanov.yelnar.flickr.domain.GetImagesUseCase
+import kz.shopanov.yelnar.flickr.domain.usecase.GetImagesUseCase
 import kz.shopanov.yelnar.flickr.domain.model.Image
 import kz.shopanov.yelnar.flickr.presentation.ui.imagelist.adapter.ImageItem
 import timber.log.Timber

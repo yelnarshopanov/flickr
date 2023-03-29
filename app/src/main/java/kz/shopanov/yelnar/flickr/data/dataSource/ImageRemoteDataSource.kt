@@ -1,8 +1,8 @@
 package kz.shopanov.yelnar.flickr.data.dataSource
 
-import kz.shopanov.yelnar.flickr.domain.model.Image
+import kz.shopanov.yelnar.flickr.data.model.ImageResponse
 
 interface ImageRemoteDataSource {
 
-    override suspend fun getImages(): List<Image>
+    suspend fun getImages(): List<ImageResponse>
 }

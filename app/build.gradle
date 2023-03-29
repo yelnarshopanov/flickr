@@ -78,6 +78,8 @@ dependencies {
     implementation coroutinesDependencies.coroutines
     implementation coroutinesDependencies.coroutinesAndroid
 
+    implementation okHttpDependencies.loggingInterceptor
+
     implementation retrofitDependencies.core
     implementation retrofitDependencies.gson
 

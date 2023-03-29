@@ -19,7 +19,7 @@
 //import kz.shopanov.yelnar.flickr.application.Constants
 //import kz.shopanov.yelnar.flickr.application.SimpleRecentSuggestionsProvider
 //import kz.shopanov.yelnar.flickr.entities.PhotoEntity
-//import kz.shopanov.yelnar.flickr.flickrApi.SearchRepository
+//import kz.shopanov.yelnar.flickr.data.api.SearchRepository
 //import kz.shopanov.yelnar.flickr.flickrApi.SearchRepositoryProvider
 //import kz.shopanov.yelnar.flickr.presentation.ui.main.MainActivity
 //import kz.shopanov.yelnar.flickr.presentation.ui.imagelist.PhotoViewActivity

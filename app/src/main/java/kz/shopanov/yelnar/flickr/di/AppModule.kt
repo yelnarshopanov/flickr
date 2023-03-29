@@ -2,35 +2,31 @@ package kz.shopanov.yelnar.flickr.di
 
 import dagger.Binds
 import dagger.Module
-import javax.inject.Singleton
+import dagger.Provides
+import kz.shopanov.yelnar.flickr.data.api.FlickrRestAPI
+import kz.shopanov.yelnar.flickr.data.api.FlickrService
+import kz.shopanov.yelnar.flickr.data.dataSource.ImageRemoteDataSource
 import kz.shopanov.yelnar.flickr.data.repository.ImageRepository
 import kz.shopanov.yelnar.flickr.data.repository.ImageRepositoryImpl
+import retrofit2.Retrofit
+import javax.inject.Singleton
 
 @Module
-interface AppModule {
+internal interface AppModule {
 
     @Singleton
     @Binds
-    fun bindD(imageRepositoryImpl: ImageRepositoryImpl): ImageRepository
+    fun bindRepository(imageRepositoryImpl: ImageRepositoryImpl): ImageRepository
 
-//    companion object {
-//        private const val DATE_FORMAT_YYYY_MM_DD = "yyyy-MM-dd"
-//        private const val DATE_FORMAT_DD_MM_YYYY = "MM/dd/yyyy HH:mm:ss"
-//
-//        @Singleton
-//        @Provides
-//        fun provideGson(): Gson =
-//            GsonBuilder()
-//                .registerTypeAdapter(
-//                    StringDate::class.java,
-//                    StringDateTypeAdapter(DATE_FORMAT_YYYY_MM_DD) { StringDate(it) }
-//                )
-//                .registerTypeAdapter(
-//                    StringDateEx::class.java,
-//                    StringDateTypeAdapter(DATE_FORMAT_DD_MM_YYYY) { StringDateEx(it) }
-//                )
-//                .registerTypeAdapter(Date::class.java, UnixEpochDateTypeAdapter())
-//                .registerTypeAdapter(UnixTime::class.java, UnixTimeTypeAdapter())
-//                .create()
-//    }
+    @Singleton
+    @Binds
+    fun bindImageRemoteDataSource(flickrRestAPI: FlickrRestAPI): ImageRemoteDataSource
+
+    companion object {
+
+        @Singleton
+        @Provides
+        fun provideFlickrService(retrofit: Retrofit): FlickrService =
+            retrofit.create(FlickrService::class.java)
+    }
 }

@@ -1,4 +1,4 @@
-package kz.shopanov.yelnar.flickr.domain
+package kz.shopanov.yelnar.flickr.domain.usecase
 
 import javax.inject.Inject
 import kotlinx.coroutines.CoroutineDispatcher
